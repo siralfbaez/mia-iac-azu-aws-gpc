@@ -1,0 +1,54 @@
+
+# --- System / OS ---
+.DS_Store
+Thumbs.db
+
+# --- Go / Services ---
+bin/
+vendor/
+*.exe
+*.test
+
+# --- Python / Tooling ---
+__pycache__/
+.venv/
+venv/
+.python-version
+.ipynb_checkpoints/
+
+# --- Terraform & Infrastructure ---
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+*.log
+override.tf
+
+# --- Security / Secrets (CRITICAL) ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.pub
+secret.tfvars
+# Protects cloud provider specific auth
+.gcloud/
+credentials.json
+legacylist.txt
+
+# --- GCP Credentials & Local Config ---
+*.json
+!api/proto/*.json
+!api/openapi/*.json
+!terraform/**/*.json # Keep policy definitions if they are JSON
+gcp-key.json
+adc.json
+
+# --- Deliverables & Artifacts ---
+data/output/
+node_modules/
+dist/
+
